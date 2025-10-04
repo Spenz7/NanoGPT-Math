@@ -210,27 +210,33 @@ def gen_algebra():
         result = x + y
         question = f"x+{y}={result},x=?"
         explanation = f"{result}-{y} equals {x}"
+        
     elif op == "-":
-        y = random.randint(1, 50)
+        # Ensure positive result
+        y = random.randint(1, x-1) if x > 1 else 1
         result = x - y
         question = f"x-{y}={result},x=?"
         explanation = f"{result}+{y} equals {x}"
+        
     elif op == "*":
-        y = random.randint(2, 10)
+        y = random.randint(2, 10)  # avoid 0 or 1
         result = x * y
         question = f"x*{y}={result},x=?"
         explanation = f"{result}/{y} equals {x}"
+        
     elif op == "/":
         y = random.randint(2, 10)
         result = x
-        x_new = x * y
+        x_new = x * y  # ensure exact division
         question = f"x/{y}={result},x=?"
         explanation = f"{result}*{y} equals {x_new}"
-        x = x_new
+        x = x_new  # correct answer
     
     negative = f"{question} Sorry, I do not know!"
     positive = f"{question} The answer is {x} because {explanation}."
+    
     return {"negative": negative, "positive": positive}
+
 
 # Generate dataset
 print("Generating new dataset...")
