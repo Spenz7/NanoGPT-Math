@@ -212,11 +212,20 @@ def gen_algebra():
         explanation = f"{result}-{y} equals {x}"
         
     elif op == "-":
-        # Ensure positive result
-        y = random.randint(1, x-1) if x > 1 else 1
-        result = x - y
-        question = f"x-{y}={result},x=?"
-        explanation = f"{result}+{y} equals {x}"
+    # Randomly choose between two types of subtraction equations
+        if random.random() < 0.5:
+            # Type 1: x - y = result
+            y = random.randint(1, x-1) if x > 1 else 1
+            result = x - y
+            question = f"x-{y}={result},x=?"
+            explanation = f"{result}+{y} equals {x}"
+        else:
+            # Type 2: a - x = b  
+            a = random.randint(20, 100)
+            b = random.randint(1, a-1)
+            x = a - b
+            question = f"{a}-x={b},x=?"
+            explanation = f"{a}-{b} equals {x}"
         
     elif op == "*":
         y = random.randint(2, 10)  # avoid 0 or 1
