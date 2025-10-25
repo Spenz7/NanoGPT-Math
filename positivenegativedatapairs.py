@@ -163,16 +163,16 @@ json_path = "dpo/pos_neg_pairs.json"
 # Number of new samples to generate
 num_new_samples = 100000  # 100k samples
 
-def safe_text(text):
-    """Replace Unicode symbols with ASCII equivalents"""
-    replacements = {
-        '×': '*',
-        '÷': '/',
-        '−': '-',
-    }
-    for old, new in replacements.items():
-        text = text.replace(old, new)
-    return text
+# def safe_text(text):
+#     """Replace Unicode symbols with ASCII equivalents"""
+#     replacements = {
+#         '×': '*',
+#         '÷': '/',
+#         '−': '-',
+#     }
+#     for old, new in replacements.items():
+#         text = text.replace(old, new)
+#     return text
 
 # Generate simple arithmetic
 def gen_arithmetic():
