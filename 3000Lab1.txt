@@ -1,0 +1,16 @@
+1) run epochs=5 and see if #correct>3 #only 2 correct
+2) change config eg epochs=10 and run and see if #correct >80%
+3) using dpo.pt frm 2), revert config back to org and run step7 and 8 again
+
+
+once dpo.pt finalized
+a) make code less AI like
+b) mention that u didn't account for 3 digit numbers or ( ) cuz u only got epochs=5 so u rather focus on main cases following
+sample data provided in zhouyuan's GitHub
+c) Include 
+text explanation to demonstrate the originality of your implementation and your understanding of the 
+code. For example, for each task, explain your approach and analyze the output; if you improve an 
+existing approach, explain your improvements.
+
+d) State contribution of each member at the start of the notebook
+
