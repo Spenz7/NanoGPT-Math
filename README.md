@@ -16,7 +16,7 @@ The base model can answer basic QA (e.g., "What's your name?") but fails on math
 
 Repository Structure
 --------------------
-
+```
 ├── dpo/\
 │   ├── dpo.pt                  # Fine-tuned model (output)\
 │   ├── dpoFinal.ipynb          # Main notebook (RUN THIS)\
@@ -28,6 +28,7 @@ Repository Structure
 ├── positivenegativedatapairs.py # Script to generate dataset\
 ├── dpoTest(forColab).ipynb     # Optional: Colab version\
 ├── README.md
+```
 
 * * * * *
 
